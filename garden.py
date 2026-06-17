@@ -12,7 +12,7 @@ from flowers import (
 
 from rewards import XP_VALUES
 from fact_checker import verify_fact
-
+from achievements import ACHIEVEMENTS 
 FILE_NAME = "garden.json"
 
 def load_facts():
@@ -135,12 +135,28 @@ def get_level(total_xp):
 
     else:
         return "👑 Keeper of the Garden"
+    
+def view_achievements():
+    facts = load_facts()
+
+    total_facts = len(facts)
+
+    print("\n🏆 ACHIEVEMENTS 🏆\n")
+
+    for achievement in ACHIEVEMENTS:
+        if total_facts >= achievement["requirement"]:
+            status = "✅"
+        else:
+            status = "❌"
+
+        print(f"{status} {achievement['name']}")
 
 while True:
     print("\n🌸 KNOWLEDGE GARDEN 🌸")
     print("1. Add Fact")
     print("2. View Garden")
-    print("3. Exit")
+    print("3. View Achievements")
+    print("4. Exit")
 
     choice = input("\nChoose an option: ")
 
@@ -151,8 +167,11 @@ while True:
         view_garden()
 
     elif choice == "3":
+        view_achievements()
+
+    elif choice == "4":
         print("\nGoodbye! Hope to see you soon again! 🌷")
         break
 
     else:
-        print("\nPlease enter 1, 2, or 3.")
+        print("\nPlease enter 1, 2, 3, or 4.")
