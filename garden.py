@@ -11,6 +11,7 @@ from flowers import (
 )
 
 from rewards import XP_VALUES
+from fact_checker import verify_fact
 
 FILE_NAME = "garden.json"
 
@@ -50,7 +51,17 @@ def get_random_flower():
 
     return flower, rarity
 def add_fact():
-    fact = input("What did you learn today?\n> ")
+    fact = input("What topic did you learn about today?\n> ")
+
+    print("\n🔍 Checking Wikipedia...")
+
+    if not verify_fact(fact):
+        print("\n❌ Unverified")
+        print("No XP awarded.")
+        print("No flower bloomed.")
+        return
+
+    print("✅ Verified!")
 
     flower, rarity = get_random_flower()
 
@@ -60,9 +71,10 @@ def add_fact():
 
     facts.append({
         "fact": fact,
+        "verified": True,
         "flower": flower,
         "rarity": rarity,
-        "xp" : xp
+        "xp": xp
     })
 
     save_facts(facts)
@@ -104,15 +116,25 @@ def get_total_xp():
 
 def get_level(total_xp):
     if total_xp < 100:
-        return 1
+        return "🌱 Seedling"
+
     elif total_xp < 250:
-        return 2
+        return "🌿 Sprout"
+
     elif total_xp < 500:
-        return 3
+        return "🌼 Gardener"
+
     elif total_xp < 1000:
-        return 4
+        return "🌺 Botanist"
+
+    elif total_xp < 2000:
+        return "🪷 Master Botanist"
+
+    elif total_xp < 5000:
+        return "✨ Floral Sage"
+
     else:
-        return 5
+        return "👑 Keeper of the Garden"
 
 while True:
     print("\n🌸 KNOWLEDGE GARDEN 🌸")
@@ -129,7 +151,7 @@ while True:
         view_garden()
 
     elif choice == "3":
-        print("\nGoodbye! 🌷")
+        print("\nGoodbye! Hope to see you soon again! 🌷")
         break
 
     else:
