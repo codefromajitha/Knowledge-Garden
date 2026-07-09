@@ -1,28 +1,30 @@
 COMMON = [
-    "🌼 Daisy",
-    "🌷 Tulip",
-    "🌸 Cherry Blossom",
-    "🏵️ Marigold"
+    "Daisy",
+    "Cosmos",
+    "Blue Flax",
+    "Pink Petunia"
 ]
 
 UNCOMMON = [
-    "🌻 Sunflower",
-    "🌺 Hibiscus",
-    "🪻 Lavender"
+    "Marigold",
+    "White Cosmos",
+    "Peach Cosmos",
+    "Pink Cosmos"
 ]
 
 RARE = [
-    "🌹 Rose",
-    "🥀 Dark Rose",
-    "🌿 Moon Lily"
+    "Purple Dahlia",
+    "Crimson Dahlia",
+    "Sunset Gazania",
+    "Coral Dahlia"
 ]
 
 EPIC = [
-    "🌙 Night Orchid",
-    "⭐ Starlight Bloom"
+    "Moonbeam Orchid",
+    "Starlight Rose"
 ]
 
 LEGENDARY = [
-    "🪷 Gilded Lotus",
-    "✨ Celestial Blossom"
+    "Gilded Lotus",
+    "Moonlit Hydrangea"
 ]
