@@ -1,27 +1,24 @@
 COMMON = [
-    "Daisy",
-    "Cosmos",
-    "Blue Flax",
-    "Pink Petunia"
+    "Oxeye Daisy",
+    "Yellow Daisy",
+    "Pink Daisy"
 ]
 
 UNCOMMON = [
-    "Marigold",
-    "White Cosmos",
-    "Peach Cosmos",
-    "Pink Cosmos"
+    "Red Poppy",
+    "Pink Rose",
+    "Red Peony"
 ]
 
 RARE = [
-    "Purple Dahlia",
-    "Crimson Dahlia",
-    "Sunset Gazania",
-    "Coral Dahlia"
+    "Sunflower",
+    "Blush Dahlia",
+    "Azure Dahlia"
 ]
 
 EPIC = [
-    "Moonbeam Orchid",
-    "Starlight Rose"
+    "Starlit Orchid",
+    "Amethyst Rose"
 ]
 
 LEGENDARY = [
