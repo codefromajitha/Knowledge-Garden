@@ -1,5 +1,5 @@
 COMMON = [
-    "Oxeye Daisy",
+    "White Daisy",
     "Yellow Daisy",
     "Pink Daisy"
 ]
